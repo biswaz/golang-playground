@@ -20,6 +20,11 @@ func Test_sum(t *testing.T) {
 			args{integers: []int64{0, 1, 1, 2, 3}},
 			7,
 		},
+		{
+			"negative integers",
+			args{integers: []int64{-1, -9, -2, -3}},
+			-15,
+		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
